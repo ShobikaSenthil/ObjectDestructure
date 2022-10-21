@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object destructuring</h1>
+</body>
+</html>
+
+<script>
+
+const profile = {
+    names:"Shobika",
+    city:"Chennai",
+    age:21,
+    state:"TamilNadu"
+}
+
+const profile2 = {
+    names:"Sruthi",
+    city:"Chennai",
+    age:21,
+    state:"TamilNadu"
+}
+
+const profile3 = profile; //copy
+console.log(profile3);
+
+
+console.log(profile);
+profile3.names = "Rakshi";
+console.log(profile3);
+
+const {names,city, ...restProfile} = profile;  //rest
+
+console.log(names);
+console.log(city);
+console.log(restProfile);
+
+// const {...profile2, age} = profile;
+const spread = {...profile2};  //spread
+// console.log(profile);
+console.log(spread);
+
+
+//Alias
+const {city : cityname} = profile;
+console.log(cityname);
+
+</script>
+
+
+
+
+
+
+
+
